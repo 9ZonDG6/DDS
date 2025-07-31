@@ -1,5 +1,6 @@
 from django.contrib import admin
 from rangefilter.filters import DateRangeFilter
+
 from apps.core import models
 from apps.core.forms import CashFlowAdmin
 
@@ -10,7 +11,13 @@ class CashFlow(admin.ModelAdmin):
 
     list_display = ('id', 'amount', 'status', 'flow_type', 'category', 'subcategory', 'created_at')
     list_select_related = ('status', 'flow_type', 'category', 'subcategory')
-    list_filter = ('status', 'flow_type', 'category', 'subcategory', ('created_at', DateRangeFilter),)
+    list_filter = (
+        'status',
+        'flow_type',
+        'category',
+        'subcategory',
+        ('created_at', DateRangeFilter),
+    )
     autocomplete_fields = ('status', 'flow_type')
 
 
