@@ -42,7 +42,7 @@ class SubCategory(serializers.ModelSerializer):
         queryset=models.Category.objects.select_related('flow_type').all(),
         write_only=True,
     )
-    category = Category(read_only=True)
+    category = CategoryShort(read_only=True)
 
     class Meta:
         model = models.SubCategory

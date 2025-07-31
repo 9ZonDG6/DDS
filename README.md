@@ -13,7 +13,7 @@
 
 ```bash
 
-uv sync && source venv/bin/activate
+uv sync && source .venv/bin/activate
 
 cp .env.example .env
 
