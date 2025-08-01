@@ -122,8 +122,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    'staticfiles': {
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
     }
 }
 

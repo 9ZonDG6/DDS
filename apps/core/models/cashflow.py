@@ -21,7 +21,7 @@ class CashFlow(models.Model):
         'SubCategory', verbose_name='подкатегория', related_name='cashflows', on_delete=models.PROTECT
     )
     comment = models.TextField('комментарий', null=True, blank=True, help_text='комментарий к записи в свободной форме')
-    created_at = models.DateField('дата создания', default=date.today)
+    created_at = models.DateField('дата создания', default=date.today, db_index=True)
 
     class Meta:
         ordering = ('id',)

@@ -21,9 +21,12 @@ class CashFlow(admin.ModelAdmin):
         ('created_at', DateRangeFilter),
     )
     autocomplete_fields = ('status', 'flow_type')
+    list_per_page = 50
 
-    def short_comment(self, obj):
+    def short_comment(self, obj: models.CashFlow) -> str:
+        """Обрезает comment до 42 символов в админке."""
         return obj.comment[:42] + '...' if len(obj.comment) > 42 else obj.comment
+
     short_comment.short_description = 'Комментарий'
 
 
