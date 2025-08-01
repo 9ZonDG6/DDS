@@ -41,3 +41,5 @@ python manage.py createsuperuser
   python manage.py migrate silk
   python manage.py collectstatic --noinput
 ```
+После этого перезапустите сервер. Сервис будет доступен по адресу:
+* **Silk** — [http://localhost:8000/backend/silk/](http://localhost:8000/backend/silk/)

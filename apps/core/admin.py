@@ -11,7 +11,7 @@ from apps.core.forms import CashFlowAdmin
 class CashFlow(admin.ModelAdmin):
     form = CashFlowAdmin
 
-    list_display = ('id', 'amount', 'status', 'flow_type', 'category', 'subcategory', 'created_at')
+    list_display = ('id', 'amount', 'status', 'flow_type', 'category', 'subcategory', 'short_comment', 'created_at')
     list_select_related = ('status', 'flow_type', 'category', 'subcategory')
     list_filter = (
         'status',
@@ -21,6 +21,10 @@ class CashFlow(admin.ModelAdmin):
         ('created_at', DateRangeFilter),
     )
     autocomplete_fields = ('status', 'flow_type')
+
+    def short_comment(self, obj):
+        return obj.comment[:42] + '...' if len(obj.comment) > 42 else obj.comment
+    short_comment.short_description = 'Комментарий'
 
 
 @admin.register(models.Status)
