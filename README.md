@@ -39,4 +39,5 @@ python manage.py createsuperuser
 Если необходимо включить silk, в .env поменять значение `ENABLE_SILK` на *true* и применить миграции:
 ```bash
   python manage.py migrate silk
+  python manage.py collectstatic --noinput
 ```
