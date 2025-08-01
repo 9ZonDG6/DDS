@@ -10,18 +10,18 @@ router = DefaultRouter()
 
 urlpatterns = [
     path('', RedirectView.as_view(url='/backend/swagger/')),
-    path('backend/autocomplete/category/', autocompletes.CategoryAutocomplete.as_view(), name='category-autocomplete'),
+    path('autocomplete/category/', autocompletes.CategoryAutocomplete.as_view(), name='category-autocomplete'),
     path(
-        'backend/autocomplete/subcategory/',
+        'autocomplete/subcategory/',
         autocompletes.SubCategoryAutocomplete.as_view(),
         name='subcategory-autocomplete',
     ),
 ]
 
-router.register('cashflow', views.CashFlow, basename='cashflow')
-router.register('status', views.Status, basename='status')
-router.register('type', views.FlowType, basename='type')
-router.register('category', views.Category, basename='category')
-router.register('subcategory', views.SubCategory, basename='subcategory')
+router.register('cashflows', views.CashFlow, basename='cashflows')
+router.register('statuses', views.Status, basename='statuses')
+router.register('types', views.FlowType, basename='types')
+router.register('categories', views.Category, basename='categories')
+router.register('subcategories', views.SubCategory, basename='subcategories')
 
 urlpatterns += router.urls

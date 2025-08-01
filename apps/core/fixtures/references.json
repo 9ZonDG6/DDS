@@ -1,0 +1,85 @@
+[
+{
+    "model": "core.status",
+    "pk": 1,
+    "fields": {
+        "name": "Бизнес"
+    }
+},
+{
+    "model": "core.status",
+    "pk": 2,
+    "fields": {
+        "name": "Личное"
+    }
+},
+{
+    "model": "core.status",
+    "pk": 3,
+    "fields": {
+        "name": "Налог"
+    }
+},
+{
+    "model": "core.flowtype",
+    "pk": 1,
+    "fields": {
+        "name": "Пополнение"
+    }
+},
+{
+    "model": "core.flowtype",
+    "pk": 2,
+    "fields": {
+        "name": "Списание"
+    }
+},
+{
+    "model": "core.category",
+    "pk": 1,
+    "fields": {
+        "name": "Инфраструктура",
+        "flow_type": 2
+    }
+},
+{
+    "model": "core.category",
+    "pk": 2,
+    "fields": {
+        "name": "Маркетинг",
+        "flow_type": 2
+    }
+},
+{
+    "model": "core.subcategory",
+    "pk": 1,
+    "fields": {
+        "name": "VPS",
+        "category": 1
+    }
+},
+{
+    "model": "core.subcategory",
+    "pk": 2,
+    "fields": {
+        "name": "Proxy",
+        "category": 1
+    }
+},
+{
+    "model": "core.subcategory",
+    "pk": 3,
+    "fields": {
+        "name": "Farpost",
+        "category": 2
+    }
+},
+{
+    "model": "core.subcategory",
+    "pk": 4,
+    "fields": {
+        "name": "Avito",
+        "category": 2
+    }
+}
+]

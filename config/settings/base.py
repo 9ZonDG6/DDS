@@ -68,12 +68,15 @@ if ENABLE_SILK := env.bool('ENABLE_SILK', default=False):
         '/backend/schema/',
         '/backend/admin/',
         '/backend/admin/jsi18n/',
+        '/backend/admin/login/',
     ]
 
     SILKY_PYTHON_PROFILER = True
     SILKY_AUTHENTICATION = True
 
 ROOT_URLCONF = 'config.urls'
+
+LOGIN_URL = '/backend/admin/login/'
 
 TEMPLATES = [
     {

@@ -1,5 +1,7 @@
 from django.contrib import admin
+from django.contrib.auth.models import Group
 from rangefilter.filters import DateRangeFilter
+from rest_framework_simplejwt.token_blacklist.models import BlacklistedToken, OutstandingToken
 
 from apps.core import models
 from apps.core.forms import CashFlowAdmin
@@ -47,3 +49,8 @@ class SubCategory(admin.ModelAdmin):
     list_select_related = ('category',)
     search_fields = ('name', 'category__name')
     autocomplete_fields = ('category',)
+
+
+admin.site.unregister(BlacklistedToken)
+admin.site.unregister(OutstandingToken)
+admin.site.unregister(Group)
