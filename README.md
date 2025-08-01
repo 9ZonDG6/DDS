@@ -10,7 +10,6 @@
 ---
 
 ## Быстрый старт
-
 ```bash
 
 uv sync && source .venv/bin/activate
@@ -19,6 +18,10 @@ cp .env.example .env
 
 python manage.py migrate
 python manage.py createsuperuser
+```
+
+## Запуск проекта
+```bash
 
 python manage.py runserver
 ```
